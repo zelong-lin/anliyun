@@ -1,0 +1,142 @@
+/*
+ *zero for 2016-11-05
+ * */
+/*基本信息setting.html*/
+body,html{
+	width: 100%;
+	height: 100%;
+}
+.mui-btn-success{
+	border: none;
+}
+#setting-box {
+	position: relative;
+}
+ul,li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#setting_shadow{
+	width: 60%;
+	height: 18%;
+	position: absolute;
+	left: 20%;
+	top: 40%;
+	z-index: 100;
+	background: rgba(0,0,0,0.5);
+	border-radius: 10px;
+	text-align: center;
+	display: none;
+}
+#setting_shadow:before{
+	content:'';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+#setting_shadow span{
+	width: 100%;
+	color: white;
+	font-size: 12px;
+	vertical-align: middle;
+}
+#setting-form {
+	margin: 0 8px;
+}
+#setting-tab {
+	width: 100%;
+}
+
+#setting-tab>div {
+	line-height: 40px;
+	width: 33.33%;
+	text-align: center;
+	float: left;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+	padding-top: 20px;
+	background-color: #FFFFFF;
+	font-size: 1rem;
+}
+#setting-tab>div>a{
+	color: #333;
+}
+#setting-tab>div:nth-of-type(2),#setting-tab>div:nth-of-type(3){
+	border-left: 1px solid #ddd;
+	margin-left: -1px;
+}
+#setting-tab .setting-active {
+	color: #ea961b;
+	border-bottom: 3px solid;
+	padding-bottom: 10px;
+}
+#setting-form .mui-input-group{
+	background-color: rgba(0,0,0,0);
+}
+#setting-form .mui-input-group:after{
+	height: 0;
+}
+#setting-form .mui-input-group .mui-input-row{
+	height: 44px;
+}
+#setting-form .mui-input-row{
+	background-color: #FFFFFF;
+}
+#setting-form .mui-input-row label{
+	width: 48%;
+	font-size:0.9rem;
+	padding: 18px 15px;
+}
+#setting-form .mui-input-row label~input{
+	width: 52%;
+	font-size:0.8rem;
+}
+.setting-mg-top{
+	margin-top: 20px;
+}
+#setting-form .mui-input-row .mui-navigate-right>img{
+	width: 30px;
+	margin: 10px 0 0 0;
+    position: absolute;
+    right: 47px;
+}
+#setting-form .mui-input-row.setting-user{
+	height: 100px;
+}
+#setting-form .mui-input-row.setting-user label{
+	padding: 45px 15px;
+}
+#setting-form .mui-input-row.setting-user .mui-navigate-right>img{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+#setting-form .mui-input-group .mui-input-row:after{
+	right:15px;
+}
+.mui-input-group .mui-input-row.setting-line:after{
+	height: 0;
+}
+#setting-button{
+	text-align: center;
+    margin: 20px 0 30px;
+}
+#setting-button button{
+	padding: 10px 0px;
+	font-size: 1.2rem;
+	width: 36%;
+	color: #333;
+}
+#setting-button .mui-btn-success{
+	background-color: #ea961b;
+	color: #f7f7f7;
+}
+/*上传背景*/
+
+#setting-form #setting_bg{
+	height: 60px;
+}
+#setting-form #setting_bg img{
+	width: 22px;
+}

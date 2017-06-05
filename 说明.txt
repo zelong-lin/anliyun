@@ -1,0 +1,1 @@
+启动页顺序(根据实际需要打开特定页面作为demo起始页)-->login.html>begin.html>index.html

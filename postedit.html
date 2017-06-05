@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义动态</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<!--不缓存-->
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Cache" content="no-cache">
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<link rel="stylesheet" type="text/css" href="css/postedit.css" />
+	</head>
+
+	<body>
+		<div id="postedit-box">
+			<div id="postedit-tab">
+				<div>
+					<a class="postedit-active">自定义动态</a>
+				</div>
+				<div>
+					<a>选择安利应用</a>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div id="postedit-form">
+				<form class="mui-input-group">
+					<div class="mui-input-row postedit-line">
+						<label>上传图片</label>
+						<a class="mui-navigate-right" href="#">
+							<img src="img/postadd/up-bg.png" />
+						</a>
+					</div>
+					<p class="postedit-p">我的动态标题</p>
+					<div class="mui-input-row postedit-line ">
+						<input type="text" placeholder="请输入标题" value="标题">
+					</div>
+					<p class="postedit-p">我的动态内容</p>
+					<div class="mui-input-row postedit-line postedit-textarea">
+						<textarea placeholder="请输入文本">动态内容</textarea>
+						<span class="postadd-number">50</span>
+					</div>
+					<p class="postedit-p">我的动态外链</p>
+					<div class="mui-input-row postedit-line ">
+						<input type="text" placeholder="请输入地址" value="http://www.baidu.com">
+					</div>
+					<div id="postedit-button">
+						<a href="post.html"><button type="button" id="postedit-save" class="mui-btn mui-btn-success">发布</button></a>
+						<button type="button" id="postedit-preview" class="mui-btn mui-btn-grey">预览</button>
+						<a href="post.html"><button type="button" class="mui-btn mui-btn-grey">取消</button></a>
+					</div>
+				</form>
+			</div>
+			<!--预览-->
+			<div id="postedit-preview-box">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red">删除</a>
+						</div>
+						<div class="mui-slider-handle">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="img/index/post.png">
+								<div class="mui-media-body">
+									<p class='mui-ellipsis'>[直播]乐纤2016健身操挑战赛</p>
+									<p class='ellipsis-3'>别告诉我没人在乎你的胖瘦,2016乐仙体重管理自我挑战赛开赛了,斩去肥膘,还我小蛮腰</p>
+								</div>
+							</a>
+						</div>
+					</li>
+				</ul>
+				<div>
+					<a href="post.html"><button type="button" class="mui-btn cancel">发布</button></a>
+					<a data-hide="postedit-preview-box" class="hide-modal"><button type="button" class="mui-btn cancel">返回编辑</button></a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script type="text/javascript" src="js/app.js" ></script>
+	<script>
+		$(function() {
+			$('#postedit-preview').on('tap', function() {
+				var win_height=$(window).height();
+				var offs=(win_height-170)/2;
+				$('#postedit-preview-box').css('top',offs).show();
+				var mask = mui.createMask(function() { //点击蒙版时自动执行的回调；
+					$('#postedit-preview-box').hide();
+				});
+				mask.show(); //显示遮罩
+			})
+		})
+	</script>
+
+</html>

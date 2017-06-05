@@ -1,0 +1,50 @@
+/*
+ *zero for 2016-11-03
+ * */
+
+
+/*基本通用的*/
+
+.ellipsis-3 {
+	display: -webkit-box;
+	overflow: hidden;
+	white-space: normal!important;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	color: #686868;
+	font-size: 0.8rem;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.mui-backdrop {
+	background-color: rgba(0, 0, 0, .6);
+}
+
+.mui-table-view-cell {
+	padding: 11px;
+}
+
+.border-radius-4 {
+	border-radius: 4px;
+}
+
+.mui-radio input[type=radio]:checked:before,
+.mui-checkbox input[type=checkbox]:checked:before {
+	color: #ea961b;
+}
+
+.mui-radio input[type=radio]:checked:before {
+	content: '\e442';
+}
+input,textarea{
+	color: #666;
+	font-size: 0.9rem;
+}
+.display-none{
+	display: none;
+}

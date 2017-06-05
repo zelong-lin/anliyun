@@ -1,0 +1,153 @@
+/*
+ *zero for 2016-11-08
+ * */
+
+
+/*我的动态setting.html*/
+body,html{
+	width: 100%;
+	height: 100%;
+}
+
+#post-bg {
+	position: fixed;
+	top: 0;
+}
+
+#post-bg img {
+	width: 100%;
+}
+
+#post-box {
+	margin: 0 20px 0 30px;
+	padding-top: 50px;
+	position: relative;
+}
+.post-ul{
+	position: relative;
+}
+#post-box ul {
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+.post-ul:before{
+    content: " ";
+    position: absolute;
+    border-left: 1px solid #eee;
+    height: 93%;
+    top: 50px;
+    left: 0px;
+}
+#post-box .mui-ellipsis {
+	color: #000000;
+	font-size: 1.1rem;
+	margin-bottom: 5px;
+}
+
+#post-box .mui-ellipsis-2 {
+	font-size: 0.8rem;
+	color: #686868;
+}
+
+#post-box .mui-table-view {
+	border-radius: 5px;
+}
+
+#post-box .mui-media-object {
+	width: 100px;
+	max-width: 100px;
+	height: 100px;
+}
+
+#post-box .mui-table-view:before,
+#post-box .mui-table-view:after {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.post-date{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 1px solid #eee;
+	position: absolute;
+	left: -20px;
+	top: 10px;
+	font-size: 0.8rem;
+	color: #eee;
+	padding-top: 8px;
+	text-align: center;
+}
+#post-more{
+	text-align: center;
+	color: #f7f7f7;
+	vertical-align: middle;
+	margin-bottom: 0;
+	position: relative;
+	margin-bottom: 20%;
+}
+#post-more img{
+	width: 1rem;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+#post-box button {
+	padding: 4px 12px;
+	float: right;
+	margin-top: 5px;
+	font-size: 0.8rem;
+}
+
+#post-box button img {
+	margin-right: 3px;
+}
+
+#post-add {
+	padding-left: 30px;
+	margin: 0px 20px 20px 30px;
+	position: relative;
+	padding-top: 10px;
+}
+
+#post-add button {
+	width: 100%;
+	background-color: #e58e01;
+	border: 1px solid #e58e01;
+	border-radius: 6px;
+}
+#post-add button img{
+	vertical-align: middle;
+	width: 150px;
+}
+.post-arrow {
+	position: absolute;
+	z-index: 1000;
+	top: 50%;
+	left: -20px;
+	overflow: hidden;
+	width: 20px;
+	height: 20px;
+	margin-top: -10px;
+}
+
+.post-arrow:after {
+	position: absolute;
+	top: 0px;
+	left: 15px;
+	width: 20px;
+	height: 20px;
+	content: ' ';
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+	border-radius: 2px;
+	background: #e58e01;
+}
+#post_add{
+	width: 87.5%;
+	position: fixed;
+	bottom: 1%;
+	left:8%;
+}
+#post_add img{
+	width: 100%;
+}
+

@@ -1,0 +1,24 @@
+/*
+ *zero for 2016-11-05
+ * */
+
+
+/*欢迎来到我的名片begin.html*/
+
+#begin-box {
+	text-align: center;
+}
+
+#begin-box h2 {
+	margin: 60px 0 30px 0;
+	font-size: 1.1rem;
+}
+
+#begin-index-img {
+	width: 60%;
+}
+
+#begin-btn-img {
+	width: 75%;
+	margin-top: 50px;
+}

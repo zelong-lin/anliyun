@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>选择安利应用</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<!--不缓存-->
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Cache" content="no-cache">
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<link rel="stylesheet" type="text/css" href="css/postadd.css" />
+	</head>
+
+	<body>
+		<div id="postadd2-box">
+			<div id="postadd-tab">
+				<div>
+					<a href="postadd.html">自定义动态</a>
+				</div>
+				<div>
+					<a class="postadd-active">选择安利应用</a>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<!--选择应用-->
+			<div id="postadd2-list">
+				<p><span id="postadd2-list-active">请选择安利应用</span><span class="mui-icon mui-icon-arrowdown mui-pull-right"></span></p>
+				<div id="postadd2-list-all">
+					<p data-show="postadd2-img" id="post_photo">
+						A+画册
+					</p>
+					<p data-show="postadd2-helper">
+						活动助手
+					</p>
+					<p data-show="postadd2-expand">
+						推广文章
+					</p>
+				</div>
+			</div>
+			<div id="postadd2-form">
+			<!--相册test-->
+			<div id="postadd2-img" class="postadd2-show">
+				<p>选择已有相册</p>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img1.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[A+画册]乐仙2016健身操挑战赛</label>
+									<span class="postadd2_ball">
+										<span class="postadd2_ball_select"></span>
+										<span class="postadd2_ball_mo"></span>
+									</span>
+									
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img3.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[A+画册]适合女性的健身方法</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select" ></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img2.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[A+画册]睡前瑜伽又健身</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img1.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[A+画册]乐仙2016健身操挑战赛</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img3.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[A+画册]适合女性的健身方法</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					
+				</ul>
+			</div>
+			<!--活动助手test-->
+			<div id="postadd2-helper" class="postadd2-show">
+				<p>选择已有活动</p>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img1.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[活动助手]乐仙2016健身操挑战赛</label>
+									<span class="postadd2_ball">
+										<span class="postadd2_ball_select"></span>
+										<span class="postadd2_ball_mo"></span>
+									</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img2.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[活动助手]睡前瑜伽又健身</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img3.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[活动助手]适合女性的健身方法</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img1.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[活动助手]乐仙2016健身操挑战赛</label>
+									<span class="postadd2_ball">
+										<span class="postadd2_ball_select"></span>
+										<span class="postadd2_ball_mo"></span>
+									</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img2.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[活动助手]睡前瑜伽又健身</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img3.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[活动助手]适合女性的健身方法</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img1.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[活动助手]乐仙2016健身操挑战赛</label>
+									<span class="postadd2_ball">
+										<span class="postadd2_ball_select"></span>
+										<span class="postadd2_ball_mo"></span>
+									</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img2.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[活动助手]睡前瑜伽又健身</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img3.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[活动助手]适合女性的健身方法</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img1.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[活动助手]乐仙2016健身操挑战赛</label>
+									<span class="postadd2_ball">
+										<span class="postadd2_ball_select"></span>
+										<span class="postadd2_ball_mo"></span>
+									</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img2.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[活动助手]睡前瑜伽又健身</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img3.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[活动助手]适合女性的健身方法</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img1.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[活动助手]乐仙2016健身操挑战赛</label>
+									<span class="postadd2_ball">
+										<span class="postadd2_ball_select"></span>
+										<span class="postadd2_ball_mo"></span>
+									</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img2.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[活动助手]睡前瑜伽又健身</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img3.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[活动助手]适合女性的健身方法</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					
+				</ul>
+				
+				<p id="postadd2-more"><img src="img/postadd/more.png" alt="" />下拉加载更多</p>
+			</div>
+			<!--推广助手test-->
+			<div id="postadd2-expand" class="postadd2-show">
+				<p>选择已有推广</p>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img1.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]乐仙2016健身操挑战赛</label>
+									<span class="postadd2_ball">
+										<span class="postadd2_ball_select"></span>
+										<span class="postadd2_ball_mo"></span>
+									</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img2.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]睡前瑜伽又健身</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img3.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]适合女性的健身方法</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img1.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]乐仙2016健身操挑战赛</label>
+									<span class="postadd2_ball">
+										<span class="postadd2_ball_select"></span>
+										<span class="postadd2_ball_mo"></span>
+									</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img2.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]睡前瑜伽又健身</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img3.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]适合女性的健身方法</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img1.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]乐仙2016健身操挑战赛</label>
+									<span class="postadd2_ball">
+										<span class="postadd2_ball_select"></span>
+										<span class="postadd2_ball_mo"></span>
+									</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img2.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]睡前瑜伽又健身</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img3.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]适合女性的健身方法</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img1.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]乐仙2016健身操挑战赛</label>
+									<span class="postadd2_ball">
+										<span class="postadd2_ball_select"></span>
+										<span class="postadd2_ball_mo"></span>
+									</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img2.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]睡前瑜伽又健身</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img3.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]适合女性的健身方法</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img1.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]乐仙2016健身操挑战赛</label>
+									<span class="postadd2_ball">
+										<span class="postadd2_ball_select"></span>
+										<span class="postadd2_ball_mo"></span>
+									</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img2.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]睡前瑜伽又健身</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img3.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]适合女性的健身方法</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img1.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]乐仙2016健身操挑战赛</label>
+									<span class="postadd2_ball">
+										<span class="postadd2_ball_select"></span>
+										<span class="postadd2_ball_mo"></span>
+									</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img2.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]睡前瑜伽又健身</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img3.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]适合女性的健身方法</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img1.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]乐仙2016健身操挑战赛</label>
+									<span class="postadd2_ball">
+										<span class="postadd2_ball_select"></span>
+										<span class="postadd2_ball_mo"></span>
+									</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img2.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]睡前瑜伽又健身</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img3.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]适合女性的健身方法</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img1.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]乐仙2016健身操挑战赛</label>
+									<span class="postadd2_ball">
+										<span class="postadd2_ball_select"></span>
+										<span class="postadd2_ball_mo"></span>
+									</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img2.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]睡前瑜伽又健身</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img3.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]适合女性的健身方法</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img1.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]乐仙2016健身操挑战赛</label>
+									<span class="postadd2_ball">
+										<span class="postadd2_ball_select"></span>
+										<span class="postadd2_ball_mo"></span>
+									</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img2.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]睡前瑜伽又健身</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img3.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]适合女性的健身方法</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img1.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]乐仙2016健身操挑战赛</label>
+									<span class="postadd2_ball">
+										<span class="postadd2_ball_select"></span>
+										<span class="postadd2_ball_mo"></span>
+									</span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img2.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]睡前瑜伽又健身</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li class="mui-table-view-cell mui-media">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left border-radius-4" src="img/postadd/img3.jpg">
+							<div class="mui-media-body">
+								<div class="mui-input-row mui-radio">
+									<label class="mui-ellipsis">[推广助手]适合女性的健身方法</label>
+									<span class="postadd2_ball"><span class="postadd2_ball_select"></span></span>
+								</div>
+							</div>
+						</a>
+					</li>
+					
+				</ul>
+			</div>
+			</div>
+			</div>
+			<div id="postadd-button">
+				<button type="button" id="postadd-save" class="mui-btn mui-btn-success">发布</button>
+				<button type="button" id="postadd-preview" class="mui-btn mui-btn-grey">预览</button>
+				<a href="post.html"><button type="button" class="mui-btn mui-btn-grey">取消</button></a>
+			</div>
+			<!--预览-->
+			<div id="postadd-preview-box">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red">删除</a>
+						</div>
+						<div class="mui-slider-handle">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="img/index/post.png">
+								<div class="mui-media-body">
+									<p class='mui-ellipsis'>乐纤2016健身操挑战赛</p>
+									<p class='ellipsis-3'>别告诉我没人在乎你的胖瘦,2016乐仙体重管理自我挑战赛开赛了,斩去肥膘,还我小蛮腰</p>
+								</div>
+							</a>
+						</div>
+					</li>
+					
+				</ul>
+				<div>
+					<button type="button" class="mui-btn cancel" id="window_save">发布</button>
+					<a data-hide="postadd-preview-box" class="hide-modal"><button type="button" class="mui-btn cancel">返回编辑</button></a>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script>
+		$(function() {
+			//应用展开
+			
+			$('#postadd2-list>p').on('tap', function() {
+					$('#postadd2-list-all').toggle();
+				})
+				//应用选择
+			$('#postadd2-list-all>p').on('tap', function() {
+				var datashow=$(this).attr('data-show');
+				$('#postadd2-list-active').text($(this).text());
+				$('#postadd2-list-all').hide();
+				$('#'+datashow).siblings('.postadd2-show').hide();
+				$('#'+datashow).show();
+			})
+			//预览
+			$('#postadd-preview').on('tap', function() {
+				var win_height = $(window).height();
+				var offs = (win_height - 170) / 2;
+				$('#postadd-preview-box').css('top', offs).show();
+				var mask = mui.createMask(function() { //点击蒙版时自动执行的回调；
+					$('#postadd-preview-box').hide();
+				});
+				mask.show(); //显示遮罩
+			})
+//			发布
+			$("#postadd-save").click(session_handle);
+			$("#window_save").click(session_handle);
+			
+			function session_handle(){
+				sessionStorage.setItem("anli_logo","1");
+				if(sessionStorage.getItem("creat_anli") == null){
+					var creat_anli = 1;
+					sessionStorage.setItem("creat_anli",creat_anli);
+				}else{
+					$anli_handle = sessionStorage.getItem("creat_anli");
+					$anli_handle++;
+					sessionStorage.setItem("creat_anli",$anli_handle);
+				}
+				document.location.href = 'index.html';
+			}
+//			超过隐藏
+			$heler_len = $("#postadd2-helper ul li").length;
+			if($heler_len == 15){
+				
+				for(i=6;i<15;i++){
+					$("#postadd2-helper ul li").eq(i).css("display","none")
+				}
+				$("#postadd2-more").css("display","block");
+			}else{
+				$("#postadd2-more").css("display","none");
+			}
+			$("#postadd2-more").click(function(){
+				for(i=6;i<15;i++){
+					$("#postadd2-helper ul li").eq(i).css("display","block")
+				}
+				$("#postadd2-more").css("display","none");
+			})
+//			选中单选框样式
+
+			$(".mui-media").on("click",function(){
+				removeInput();
+				default_input();
+				$(this).find(".postadd2_ball_select").css("display","block");
+			})
+			removeInput();
+			function removeInput(){
+				$ball_len = $(".postadd2_ball").length;
+				for(i=0;i<$ball_len;i++){
+					$(".postadd2_ball .postadd2_ball_select").eq(i).css("display","none");
+				}
+				
+			}
+			function default_input(){
+				$mo_len = $(".postadd2_ball_mo").length;
+				for(i=0;i<$mo_len;i++){
+					$(".postadd2_ball_mo").eq(i).css("display","none");
+				}
+				
+			}
+		})
+	</script>
+
+</html>

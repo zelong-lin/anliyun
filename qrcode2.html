@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>名片二维码</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<!--不缓存-->
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Cache" content="no-cache">
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+		<link rel="stylesheet" type="text/css" href="css/qrcode2.css"/>
+	</head>
+	<body>
+		<div id="qrcode-box">
+			<div id="qrcode-tab">
+				<div><a>导入通讯录</a></div>
+				<div ><a class="qrcode-active">名片二维码</a></div>
+			</div>
+			<div class="clearfix"></div>
+			<div id="qrcode-img">
+				<img class="qrcode-img" src="img/qrcode/erwei.png" alt="名片二维码" />
+				<p>点击长按保存二维码</p>
+			</div>
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="js/zepto.min.js" ></script>
+	<script>
+		$(function(){
+			$('.qrcode-img').on('click',function(){
+				document.location.href='index.html';
+			})
+		})
+	</script>
+</html>

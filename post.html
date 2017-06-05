@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的动态</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<!--不缓存-->
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Cache" content="no-cache">
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/app.css"/>
+		<link rel="stylesheet" type="text/css" href="css/post.css"/>
+	</head>
+	<body>
+		<!--背景图-->
+		<div id="post-bg">
+			<img src="img/index/bg.jpg" alt="" />
+		</div>
+		<!--动态列表-->
+		<div id="post-box">
+			<div class="post-ul">
+				<div class="post-date">11/18</div>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red">删除</a>
+						</div>
+						<div class="mui-slider-handle">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="img/post/img1.jpg">
+								<div class="mui-media-body">
+									<p class="mui-ellipsis">[A+画册]乐纤2016健身操挑战赛</p>
+									<p class="mui-ellipsis-2">别告诉我没人在乎你的胖瘦,2016乐仙体重管理自我挑战赛开赛了,斩去肥膘,还我小蛮腰</p>
+								</div>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="post-ul">
+				<div class="post-date">11/15</div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/post/img2.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>[直播]乐纤2016健身操挑战赛</p>
+								<p class='mui-ellipsis-2'>别告诉我没人在乎你的胖瘦,2016乐仙体重管理自我挑战赛开赛了,斩去肥膘,还我小蛮腰</p>
+								<a href="postedit.html"><button type="button"><img src="img/post/edit.png" alt="" /> 编辑</button></a>
+							</div>
+						</a>
+					</div>
+				</li>
+			</ul>
+			</div>
+			<div class="post-ul">
+				<div class="post-date">11/13</div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<div class="mui-slider-right mui-disabled">
+						<a class="mui-btn mui-btn-red">删除</a>
+					</div>
+					<div class="mui-slider-handle">
+						<a href="javascript:;">
+							<img class="mui-media-object mui-pull-left" src="img/post/img3.jpg">
+							<div class="mui-media-body">
+								<p class='mui-ellipsis'>[直播]乐纤2016健身操挑战赛</p>
+								<p class='mui-ellipsis-2'>别告诉我没人在乎你的胖瘦,2016乐仙体重管理自我挑战赛开赛了,斩去肥膘,还我小蛮腰</p>
+								<a href="postedit.html"><button type="button"><img src="img/post/edit.png" alt="" /> 编辑</button></a>
+							</div>
+						</a>
+					</div>
+				</li>
+			</ul>
+			</div>
+			<div class="post-ul">
+				<div class="post-date">11/11</div>
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red">删除</a>
+						</div>
+						<div class="mui-slider-handle">
+							<a href="javascript:;">
+								<img class="mui-media-object mui-pull-left" src="img/post/img4.jpg">
+								<div class="mui-media-body">
+									<p class='mui-ellipsis'>[直播]乐纤2016健身操挑战赛</p>
+									<p class='mui-ellipsis-2'>别告诉我没人在乎你的胖瘦,2016乐仙体重管理自我挑战赛开赛了,斩去肥膘,还我小蛮腰</p>
+									<a href="postedit.html"><button type="button"><img src="img/post/edit.png" alt="" /> 编辑</button></a>
+								</div>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<p id="post-more"><img src="img/post/more.png" alt="" />下拉加载更多</p>
+		</div>
+		<!--添加-->
+		<!--<div id="post-add">
+			<div class="post-date">12/12</div>
+			<a href="postadd2.html"><button><div class="post-arrow"></div><img src="img/post/addpost.png" alt="" /></button></a>
+		</div>-->
+		<div id="post_add">
+			<a href="postadd2.html"><img src="img/post/add.png" alt="" /></a>
+		</div>
+		
+	</body>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/zepto.min.js" ></script>
+	<script>
+		$(function() {
+			//动态删除
+			setTimeout(function(){
+				mui('.mui-table-view').on('tap', '.mui-btn', function(event) {
+					var elem = this;
+					var ul = elem.parentNode.parentNode.parentNode.parentNode;
+					ul.remove();
+				});
+			},100)
+			
+			
+			
+			
+			
+			if(sessionStorage.getItem("creat_anli")){
+				var recive_anli = Number(sessionStorage.getItem("creat_anli"));
+				for(i=0;i<recive_anli;i++){
+					if(i%2 == 0){
+						$("#post-box").prepend('<div class="post-ul"><div class="post-date">11/18</div><ul class="mui-table-view"><li class="mui-table-view-cell"><div class="mui-slider-right mui-disabled"><a class="mui-btn mui-btn-red">删除</a></div><div class="mui-slider-handle"><a href="javascript:;"><img class="mui-media-object mui-pull-left" src="img/post/img2.jpg"><div class="mui-media-body"><p class="mui-ellipsis">[直播]乐纤2016健身操挑战赛</p><p class="mui-ellipsis-2">别告诉我没人在乎你的胖瘦,2016乐仙体重管理自我挑战赛开赛了,斩去肥膘,还我小蛮腰</p></div></a></div></li></ul></div>');
+					}else{
+						$("#post-box").prepend('<div class="post-ul"><div class="post-date">11/18</div><ul class="mui-table-view"><li class="mui-table-view-cell"><div class="mui-slider-right mui-disabled"><a class="mui-btn mui-btn-red">删除</a></div><div class="mui-slider-handle"><a href="javascript:;"><img class="mui-media-object mui-pull-left" src="img/post/img3.jpg"><div class="mui-media-body"><p class="mui-ellipsis">[直播]乐纤2016健身操挑战赛</p><p class="mui-ellipsis-2">别告诉我没人在乎你的胖瘦,2016乐仙体重管理自我挑战赛开赛了,斩去肥膘,还我小蛮腰</p></div></a></div></li></ul></div>');
+
+					}
+				}
+				
+			}
+			if(sessionStorage.getItem("creat_custom")){
+				var recive_custom = Number(sessionStorage.getItem("creat_custom"))
+				for(i=0;i<recive_custom;i++){
+					if(i%2 == 0){
+						$("#post-box").prepend('<div class="post-ul" ><div class="post-date">11/18</div><ul class="mui-table-view"><li class="mui-table-view-cell"><div class="mui-slider-right mui-disabled"><a class="mui-btn mui-btn-red">删除</a></div><div class="mui-slider-handle"><a href="javascript:;"><img class="mui-media-object mui-pull-left" src="img/post/img2.jpg"><div class="mui-media-body"><p class="mui-ellipsis">乐纤2016健身操挑战赛</p><p class="mui-ellipsis-2">别告诉我没人在乎你的胖瘦,2016乐仙体重管理自我挑战赛开赛了,斩去肥膘,还我小蛮腰</p><a href="postedit.html"><button type="button"><img src="img/post/edit.png" alt="" /> 编辑</button></a></div></a></div></li></ul></div>')
+					}else{
+						$("#post-box").prepend('<div class="post-ul" ><div class="post-date">11/18</div><ul class="mui-table-view"><li class="mui-table-view-cell"><div class="mui-slider-right mui-disabled"><a class="mui-btn mui-btn-red">删除</a></div><div class="mui-slider-handle"><a href="javascript:;"><img class="mui-media-object mui-pull-left" src="img/post/img3.jpg"><div class="mui-media-body"><p class="mui-ellipsis">乐纤2016健身操挑战赛</p><p class="mui-ellipsis-2">别告诉我没人在乎你的胖瘦,2016乐仙体重管理自我挑战赛开赛了,斩去肥膘,还我小蛮腰</p><a href="postedit.html"><button type="button"><img src="img/post/edit.png" alt="" /> 编辑</button></a></div></a></div></li></ul></div>')
+					}
+				}
+			}
+			$active_len = $("#post-box>div").length;
+			if($active_len <= 4){
+				$("#post-box>p").css("display","none");
+			}else{
+				$("#post-box>p").css("display","block");
+				for(i=0;i<$active_len - 4;i++){
+					$("#post-box>div").eq($active_len-i-1).css("display","none");
+				}
+			}
+			
+			$("#post-box>p").click(function(){
+				for(i=0;i<$active_len;i++){
+					if($("#post-box>div").eq(i).css("display") == "none"){
+						$("#post-box>div").eq(i).css("display","block");
+					}
+				}
+			})
+			
+		
+			
+			
+		})
+	</script>
+</html>

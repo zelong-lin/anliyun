@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>通讯录二维码</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<!--不缓存-->
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Cache" content="no-cache">
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<link rel="stylesheet" type="text/css" href="css/qraddress.css" />
+	</head>
+
+	<body>
+		<div id="qraddress-box">
+			<div id="setting_shadow">
+				<span>通讯录二维码已生成</span>
+			</div>
+			<div id="qraddress-tab">
+				<div>
+					<a href="setting.html">基本信息</a>
+				</div>
+				<div>
+					<a class="qraddress-active">通讯录二维码</a>
+				</div>
+				<div>
+					<a href="menu.html" id="lanmu_qra">栏目编辑</a>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div id="qraddress-form">
+				<form class="mui-input-group">
+					<div class="mui-input-row">
+						<label>我的公司名称</label>
+						<input type="text" id="org" placeholder="我的公司名称">
+					</div>
+					<div class="mui-input-row">
+						<label>我的网站</label>
+						<input type="url" id="web" class="mui-input-clear" placeholder="我的网站">
+					</div>
+					<div class="mui-input-row">
+						<label>我的电话</label>
+						<input type="tel" id="tel" class="mui-input-clear" placeholder="请输入电话">
+					</div>
+					<!--二维码存放-->
+					<div id="qrcode" style="display: none;">
+					</div>
+					<div id="qraddress-button">
+						<button type="button" id="qraddress-save" class="mui-btn mui-btn-success">生成我的二维码</button>&nbsp;&nbsp;
+						<button type="button" class="mui-btn mui-btn-grey" id="qra_cancel">取消</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script type="text/javascript" src="js/zepto.min.js"></script>-->
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script type="text/javascript" src="js/app.js" ></script>
+	<!--<script type="text/javascript" src="js/qrcode.js"></script>-->
+	<script type="text/javascript" src="js/jquery-qrcode.min.js"></script>
+	<script>
+		$(function() {
+			$('#qraddress-save').on('tap', function() {
+				sessionStorage.setItem("switch_b","1");
+				
+				var card,/* fname = '张',*/
+					name = sessionStorage.getItem("set_user"),
+					org = $("#org").val(),
+					tel = $("#tel").val(),
+					web = $("#web").val();
+					
+					card = "BEGIN:VCARD",
+					card += "\r\nN:;" /*+ fname + ";"*/ + name + ";;;",
+					card += "\r\nFN: " + name + "  " /*+ fname*/,
+					org && (card += "\r\nORG:" + org),
+					tel && (card += "\r\nTEL;CELL,VOICE:" + tel),
+					web && (card += "\r\nURL;WORK:" + web),
+					card += "\r\nEND:VCARD",
+					$("#qrcode").empty().qrcode({
+						render: "image",
+						ecLevel: "0" == $("#mode").val() ? "L" : "H",
+						size: 300,
+						background: "#fff",
+						fill: '#000',
+						radius: 0,
+						mode: 0,
+						
+						src:'img/photo.jpg',
+						fontcolor: '#000',
+//						image:$('#qw')[0],
+//				        mPosX:50,   //图片在X轴的位置
+//				        mPosY:50,    //图片在X轴的位置
+//				        mSize:150,   //图片大小
+						label:/* fname +*/ name,
+						text: card,
+						
+					})
+					//名片--demo
+				var cardimg=$("#qrcode").find('img').attr('src');
+				db.transaction(function(tx) {
+					tx.executeSql("delete from card", [],
+						function(tx, rs) {
+//							console.log('delete');
+						},
+						function(tx, e) {
+//							console.log(e);
+						});
+					tx.executeSql("insert INTO card (id,imgpath) VALUES(?,?)", ['1',cardimg],
+						function(tx, rs) {
+//							mui.toast('通讯录二维码已生成');
+							pop_err("通讯录二维码已生成");
+							localStorage.setItem('card','1');
+//							console.log('insert');
+						},
+						function(tx, e) {
+//							console.log('err');
+						});
+					
+				});
+				setTimeout(function(){
+						document.location.href = 'menu.html';
+					},1000)
+				
+			})
+			
+			$qra_switch = sessionStorage.getItem("switch_b");
+			if($qra_switch == null){
+				$("#lanmu_qra").click(function(){
+					return false;
+				})
+			}else{
+				$("#lanmu_qra").click(function(){
+					return true;
+				})
+			}
+			
+			$("#tel").val(sessionStorage.getItem("set_phone"));
+			$("#tel").mousedown(function(){
+				mui.toast('如需更改电话，请回到基本信息');
+				this.setAttribute("disabled","true");
+			})
+			
+			$("#qra_cancel").on("click",function(){
+				if(sessionStorage.getItem("switch_first") == null){
+					document.location.href = 'begin.html';
+				}else{
+					document.location.href = 'index.html';
+				}
+			})
+			
+			function pop_err(val){
+				$("#setting_shadow span").text(val);
+				$("#setting_shadow").css("display","block");
+				setTimeout(function(){
+					$("#setting_shadow").css("display","none");
+				},2000)
+			}
+			$("#setting_shadow").on("click",function(){
+				$("#setting_shadow").css("display","none");
+			})
+		})
+	</script>
+
+</html>

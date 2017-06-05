@@ -1,0 +1,168 @@
+/*
+ *zero for 2016-11-05
+ * */
+/*栏目编辑menu.html*/
+body,html,#menu-box{
+	width: 100%;
+	height: 100%;
+}
+#menu-box {
+}
+.mui-btn-success{
+	border: none;
+}
+/*遮罩*/
+ul,li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#setting_shadow{
+	width: 60%;
+	height: 18%;
+	position: absolute;
+	left: 20%;
+	top: 40%;
+	z-index: 100;
+	background: rgba(0,0,0,0.5);
+	border-radius: 10px;
+	text-align: center;
+	display: none;
+}
+#setting_shadow:before{
+	content:'';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+#setting_shadow span{
+	width: 100%;
+	color: white;
+	font-size: 14px;
+	vertical-align: middle;
+}
+#menu-form {
+	margin: 0 8px;
+	position: relative;
+}
+#menu-tab {
+	width: 100%;
+}
+#menu-form .mui-table-view-cell{
+	padding: 0;
+	position: relative;
+}
+#menu-tab>div {
+	line-height: 40px;
+	width: 33.33%;
+	text-align: center;
+	float: left;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+	padding-top: 20px;
+	background-color: #FFFFFF;
+	font-size: 1rem;
+}
+#menu-tab>div>a{
+	color: #333;
+}
+#menu-tab>div:nth-of-type(2),#menu-tab>div:nth-of-type(3){
+	border-left: 1px solid #ddd;
+	margin-left: -1px;
+}
+#menu-tab .menu-active {
+	color: #ea961b;
+	border-bottom: 3px solid;
+	padding-bottom: 10px;
+}
+#menu-form li{
+	background-color: #ffffff;
+	border-right: 6px solid #eee;
+    border-bottom: 6px solid #eee;
+    position: relative;
+}
+#menu-form li:active{
+	background-color: #F7F7F7;
+}
+.menu-checkbox{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 40px;
+    z-index: 9;
+}
+#menu-form .mui-checkbox{
+	height: 30px;
+}
+#menu-form li .mui-checkbox input[type=checkbox]{
+	position:initial;
+}
+.menu-icos-hai{
+	background: url(../img/menu/bg-ico.png) no-repeat -8px -3px;
+	width: 60px;
+	height: 60px;
+}
+.menu-icos-guan{
+	background: url(../img/menu/bg-ico.png) no-repeat -140px -3px;
+	width: 60px;
+	height: 60px;
+}
+.menu-icos-yue{
+	background: url(../img/menu/bg-ico.png) no-repeat -278px -3px;
+	width: 60px;
+	height: 60px;
+}
+.menu-icos-yun{
+	background: url(../img/menu/bg-ico.png) no-repeat -140px -107px;
+	width: 60px;
+	height: 60px;
+}
+.menu-icos-xian{
+	background: url(../img/menu/bg-ico.png) no-repeat -4px -107px;
+	width: 60px;
+	height: 60px;
+}
+.menu-icos-hua{
+	background: url(../img/menu/bg-ico.png) no-repeat -278px -107px;
+	width: 60px;
+	height: 60px;
+}
+.menu-icos-gong{
+	background: url(../img/menu/bg-ico.png) no-repeat -4px -215px;
+	width: 60px;
+	height: 60px;
+}
+.menu-icos-wo{
+	background: url(../img/menu/bg-ico.png) no-repeat -140px -215px;
+	width: 60px;
+	height: 60px;
+}
+.menu-icos-huo{
+	background: url(../img/menu/bg-ico.png) no-repeat -278px -215px;
+	width: 60px;
+	height: 60px;
+}
+.menu-icos-xuan{
+	background: url(../img/menu/bg-ico.png) no-repeat -4px -320px;
+	width: 60px;
+	height: 60px;
+}
+.menu-icos-cha{
+	background: url(../img/menu/bg-ico.png) no-repeat -140px -320px;
+	width: 60px;
+	height: 60px;
+}
+#menu-button{
+	text-align: center;
+    margin: 50px 0 30px;
+}
+#menu-button button{
+	padding: 10px 0px;
+	font-size: 1.2rem;
+	width: 36%;
+	color: #333;
+}
+#menu-button .mui-btn-success{
+	background-color: #ea961b;
+	color: #f7f7f7;
+}

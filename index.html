@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>首页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<!--不缓存-->
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Cache" content="no-cache">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<style>
+
+		</style>
+	</head>
+
+	<body>
+		<!--通讯录二维码弹出框-->
+		<div id="qrcode-box">
+			<div class="qrcode-top">
+				通讯录二维码
+				<span id="qrcode_close">×</span>
+			</div>
+			<div class="qrcode-code">
+				<img class="qrcode-img" src="img/qrcode/erwei.png" alt="名片二维码" />
+				<p>点击长按保存二维码</p>
+			</div>
+		</div>
+		<!--详细信息-->
+		<div id="address-box">
+			<div class="address-outer">
+				<div class="adress-img">
+					<img src="img/index/run.neil.png"/>
+					<span class="index-erwei-close">×</span>
+				</div>
+				<div class="address-btm">
+					<div class="address-head">
+						<img src="img/index/user1.png" alt="" />
+					</div>
+					<p class="address-name"></p>
+					<p class="address-active"></p>
+					<ul>
+						<li>
+							<div class="address-logo"><img src="img/index/qq.neil.png" alt="" /></div>
+							<p class="address-qq"></p>
+						</li>
+						<li>
+							<div class="address-logo"><img src="img/index/phone.neil.png" alt="" /></div>
+							<p class="address-phone"></p>
+						</li>
+						<li>
+							<div class="address-code"><img src="img/index/weixin.neil.png"/></div>
+						</li>
+					</ul>
+					<div class="address-space"></div>
+				</div>
+			</div>
+			<div class="address-close">
+				<img src="img/index/close.png"/>
+				<span>长按图片保存到相册</span>
+			</div>
+		</div>
+		<!--背景图-->
+		<div id="index-bg">
+			<img src="img/index/bg.jpg" alt="" />
+		</div>
+		<!--左上微信入口-->
+		<img src="img/index/erwei2.png" alt="" id="index-left-ico" />
+		<!--个人信息弹出层-->
+		<div id="index-user-modal" class="index-modal" style="background-color: rgba(255,255,255,0.9);">
+			<div class="index-modal-user2" /></div>
+			<div>
+				<p id="index-user-modal-name">张莉莉</p>
+				<p id="index-user-modal-tag" class="mui-ellipsis"></p>
+			</div>
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="index-user-modal-right" id="index_qq"></span> QQ号
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<span class="index-user-modal-right" id="index_tel"></span> 手机号
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="index-right-ico mui-navigate-right" data-modal="index-weixin2-modal" data-old-modal="index-user-modal">
+						<span class="index-user-modal-right"><img src="img/index/weixin3.png" alt="" /></span> 微信
+					</a>
+				</li>
+			</ul>
+			<div>
+				<a data-hide="index-user-modal" data-content="show" class="hide-modal"><button type="button" class="mui-btn cancel" style="width: 100%;">关闭</button></a>
+			</div>
+		</div>
+		<!--主体内容-->
+		<div class="mui-content" id="index-content">
+
+			<!--右小图标-->
+			<div>
+				<ul id="index-right-ico">
+					<li>
+						<a href="setting.html">
+							<div class="index-icos-setting"></div>
+						</a>
+					</li>
+					<li>
+						<div class="index-icos-weixin index-right-ico" data-modal="index-weixin-modal"></div>
+					</li>
+					<li>
+						<div class="index-icos-tel index-right-ico" data-modal="index-tel-modal" /></div>
+			</li>
+			<li>
+				<div class="index-icos-qq index-right-ico" data-modal="index-qq-modal" /></div>
+		</li>
+		<li class="display-none">
+			<div class="index-icos-erwei index-right-ico"  id="erwei-div" /></div>
+		</li>
+		</ul>
+		</div>
+		<!--个人信息-->
+		<div id="index-user">
+			<div class="index-right-ico" data-modal="index-user-modal" data-content="hide" id="index-user-img"></div>
+			<div id="index-user-name"></div>
+			<div id="index-user-tag"></div>
+			<!--电话弹出层-->
+			<div id="index-tel-modal" class="index-modal">
+				<div class="index-modal-user" /></div>
+			<p class="index-tel">138-9080-9876</p>
+			<div>
+				<a data-hide="index-tel-modal" class="hide-modal"><button type="button" class="mui-btn cancel"><div class="index-icos-close"></div>取消</button></a>
+				<a href="tel:10010"><button type="button" class="mui-btn"><div class="index-icos-tel-small"></div>呼叫</button></a>
+			</div>
+		</div>
+		<!--qq弹出层-->
+		<div id="index-qq-modal" class="index-modal">
+			<div class="index-modal-user" /></div>
+		<span class="index-icos-qq-small"></span><span class="index-qq">737388957</span>
+		<p class="index-remark">长按QQ号码复制</p>
+		<div>
+			<a data-hide="index-qq-modal" class="hide-modal"><button type="button" class="mui-btn cancel" style="width: 100%;"><div class="index-icos-close"></div>取消</button></a>
+			<!--<a href="tel:10010"><button type="button" class="mui-btn" ><div class="index-icos-copy"></div>长按复制QQ号复制</button></a>-->
+		</div>
+		</div>
+		<!--微信弹出层-->
+		<div id="index-weixin-modal" class="index-modal">
+			<div class="index-modal-user" /></div>
+		<img class="index-weixin" src="img/index/weixin2222.png" alt="二维码" />
+		<p class="index-remark">点击长按保存二维码</p>
+		<div>
+			<a data-hide="index-weixin-modal" class="hide-modal" class="index-right-ico"><button type="button" class="mui-btn cancel" style="width: 100%;"><div class="index-icos-close"></div>取消</button></a>
+		</div>
+		</div>
+		<!--头像微信弹出层-->
+		<div id="index-weixin2-modal" class="index-modal">
+			<div class="index-modal-user" /></div>
+		<img class="index-weixin" src="img/index/weixin2222.png" alt="二维码" />
+		<p class="index-remark">点击长按保存二维码</p>
+		<div>
+			<a class="index-right-ico" data-modal="index-user-modal" data-old-modal="index-weixin2-modal"><button type="button" class="mui-btn cancel" style="width: 100%;"><div class="index-icos-close"></div>取消</button></a>
+		</div>
+		</div>
+			<!--通讯录二维码弹出层-->
+			<!--<div id="index-erwei-modal" class="index-modal2">
+				<span id="index-erwei-modal-close" data-hide="index-erwei-modal" class="mui-icon mui-icon-closeempty hide-modal"></span>
+				<img class="index-modal2-erwei" src="img/index/code.png" alt="通讯录二维码" />
+				<p class="index-remark2"><img src="img/index/close.png" alt="" /> 保存图片到相册</p>
+			</div>-->
+			
+		</div>
+
+		<!--动态-->
+		<div id="index-post">
+			<div id="index-post-date">
+				<span class="index-post-date-text1">11/25</span>
+				<span class="index-post-date-text2">11/15</span>
+				<span class="index-post-date-text3">11/05</span>
+				<img class="index-post-date-top" src="img/index/date-top.png" />
+				<img class="index-post-date-middle" src="img/index/date-middle.png" />
+				<img class="index-post-date-bottom" src="img/index/date-bottom.png" />
+			</div>
+			<div id="index-post-tag">我的动态</div>
+			<ul class="mui-table-view " id="index_ul">
+				<li class="mui-table-view-cell" id="index_active">
+					<div class="mui-slider-handle" id="index_post">
+						<img class="mui-media-object mui-pull-left" src="img/index/active.init.png">
+						<div class="mui-media-body">
+							<p class="mui-ellipsis"></p>
+							<p class="ellipsis-3">你还没有任何动态，请点击下方按钮进行编辑</p>
+							<a href="postadd2.html"><button type="button" style="font-size: 12px;width: 85px;height: 30px;"><img src="img/post/edit.png" alt="" /> 添加动态</button></a>
+						</div>
+					</div>
+				</li>
+				<!--<li class="mui-table-view-cell" class="index_active">
+					<div class="mui-slider-handle index-post">
+						<img class="mui-media-object mui-pull-left" src="img/postadd/img3.jpg">
+						<div class="mui-media-body">
+							<p class="mui-ellipsis">[直播]乐纤2016健身操挑战赛</p>
+							<p class="ellipsis-3">别告诉我没人在乎你的胖瘦,2016乐仙体重管理自我挑战赛开赛了,斩去肥膘,还我小蛮腰</p>
+						</div>
+					</div>
+				</li>-->
+			</ul>
+		</div>
+		<!--底部按钮-->
+		<div id="index-bottom-menu">
+
+			<ul class="mui-table-view mui-grid-view mui-grid-9">
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-xian"></div>
+						<div class="mui-media-body">线上工作室</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-hai"></div>
+						<div class="mui-media-body">安利海外购</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-yun"></div>
+						<div class="mui-media-body">安利云知道</div>
+					</a>
+				</li>
+				
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-yue"></div>
+						<div class="mui-media-body">悅享荟</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-guan"></div>
+						<div class="mui-media-body">安利官网</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-huo"></div>
+						<div class="mui-media-body">活动助手</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-hua"></div>
+						<div class="mui-media-body">A+画册</div>
+					</a>
+				</li>
+				
+
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" id="index_column">
+					<a id="index-more">
+						<div class="mui-icon index-icos-geng"></div>
+						<div class="mui-media-body">更多</div>
+					</a>
+				</li>
+				
+			</ul>
+		</div>
+		<!--底部二维码-->
+		<div id="index-bottom-erwei-div">
+			<div id="index-bottom-erwei" class="index-icos-erwei-bottom">
+				<img src="img/index/qrcode.png" alt="" />
+			</div>
+		</div>
+		</div>
+		<!--所有栏目-->
+		<div id="index-bottom-menu-all">
+			<ul class="mui-table-view mui-grid-view mui-grid-9">
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-xian"></div>
+						<div class="mui-media-body">线上工作室</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-hai"></div>
+						<div class="mui-media-body">安利海外购</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-yun"></div>
+						<div class="mui-media-body">安利云知道</div>
+					</a>
+				</li>
+				
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-yue"></div>
+						<div class="mui-media-body">悅享荟</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-guan"></div>
+						<div class="mui-media-body">安利官网</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-huo"></div>
+						<div class="mui-media-body">活动助手</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-hua"></div>
+						<div class="mui-media-body">A+画册</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-cha"></div>
+						<div class="mui-media-body">查一查</div>
+					</a>
+				</li>
+				<!--<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-yun"></div>
+						<div class="mui-media-body">云知道</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-hai"></div>
+						<div class="mui-media-body">海外购</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-yue"></div>
+						<div class="mui-media-body">悅享荟</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-guan"></div>
+						<div class="mui-media-body">官方商城</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-gong"></div>
+						<div class="mui-media-body">公司资讯</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-wo"></div>
+						<div class="mui-media-body">我的相册</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-xian"></div>
+						<div class="mui-media-body">线上工作室</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-huo"></div>
+						<div class="mui-media-body">活动助手</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-hua"></div>
+						<div class="mui-media-body">A+画册</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-xuan"></div>
+						<div class="mui-media-body">炫酷大片</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+					<a>
+						<div class="mui-icon index-icos-cha"></div>
+						<div class="mui-media-body">查真反谣</div>
+					</a>
+				</li>-->
+			</ul>
+		</div>
+
+	</body>
+	<script type="text/javascript" src="js/mui.min.js"></script>
+	
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$(function() {
+			db.transaction(function(tx) {
+					tx.executeSql("select imgpath from card where id=?", ["1"],
+						function(tx, rs) {
+							if(rs.rows.length>0){
+								$('.qrcode-img').attr('src',rs.rows.item(0).imgpath);
+							}
+						},
+						function(tx, e) {
+//							alert(e);
+						});
+				});
+			//有保存二维码demo
+			var hasCade=localStorage.getItem("card");
+			if(hasCade){
+				$('.display-none').show();
+			}
+			//底部向上滑动跳转名片二维码页面
+			mui('#index-bottom-erwei-div').on("swipeup", '#index-bottom-erwei', function() {
+				$("#qrcode-box").css("display","block");
+			});
+			mui('#index-bottom-erwei-div').on("click", '#index-bottom-erwei', function() {
+				$("#qrcode-box").css("display","block");
+			});
+			//动态跳转
+			$('#index-post').on('tap', function() {
+					if(sessionStorage.getItem("creat_custom") == null && sessionStorage.getItem("creat_anli") == null){
+						document.location.href = 'postadd2.html';
+					}else{
+						document.location.href = 'post.html';
+					}
+					
+				})
+				//动态删除
+				//			mui('#index-post').on('tap', '.mui-btn', function(event) {
+				//				var elem = this;
+				//				var li = elem.parentNode.parentNode;
+				//				li.parentNode.removeChild(li);
+				//			});
+				//弹出框
+			$('.index-right-ico').on('tap', function(event) {
+					var tagAttr = $(this).attr('data-modal');
+					var oldTagAttr = $(this).attr('data-old-modal');
+					//是否隐藏背景内容
+					var contentShow = $(this).attr('data-content');
+					if(contentShow) {
+						$('#index-content').hide();
+					}
+					//是否多个打开
+					if(oldTagAttr) {
+						$('#index-content').show();
+						$('#' + oldTagAttr).hide();
+						$('.mui-backdrop').remove();
+					}
+					if(tagAttr) {
+						//遮罩显示
+						$('#' + tagAttr).show();
+						var mask = mui.createMask(function() {
+							$('#' + tagAttr).hide(); //点击蒙版时自动执行的回调；
+							if(contentShow) {
+								$('#index-content').show();
+							}
+						});
+						mask.show(); //显示遮罩
+					}
+				})
+				//弹出框隐藏
+			$('.hide-modal').on('tap', function() {
+					//是否显示背景内容
+					var contentShow = $(this).attr('data-content');
+					if(contentShow) {
+						$('#index-content').show();
+					}
+					$('#' + $(this).attr('data-hide')).hide();
+					$('.mui-backdrop').remove();
+				})
+				//更多显示
+			$('#index-more').on('click', function() {
+				$('#index-content').hide();
+				$('#index-bottom-menu-all').css('margin-top', ($(window).height() - 270) / 2);
+				$('#index-bottom-menu-all').show();
+			
+				var mask = mui.createMask(function() { //点击蒙版时自动执行的回调；
+					$('#index-bottom-menu-all').hide();
+					$('#index-content').show();
+				});
+				mask.show(); //显示遮罩
+			})
+//			更多按键处理
+			if(sessionStorage.getItem('checked_inp') >= 8){
+				$("#index-more").css("display","block");
+			}else{
+				$("#index-more").css("display","none");
+			}
+			
+			
+			
+
+//			安丽云动态
+			
+			if(sessionStorage.getItem("anli_logo")){
+				sessionStorage.removeItem("custom_logo");
+				$('#index_active').css("display","none");
+				$("#index-post-tag").css("display","block");
+				$("#index_ul").append('<li class="mui-table-view-cell" id="index_active"><div class="mui-slider-handle " id="index_post"><img class="mui-media-object mui-pull-left" src="img/postadd/img2.jpg"><div class="mui-media-body"><p class="mui-ellipsis">[直播]乐纤2016健身操挑战赛</p><p class="ellipsis-3">别告诉我没人在乎你的胖瘦,2016乐仙体重管理自我挑战赛开赛了,斩去肥膘,还我小蛮腰</p></div></div></li>');
+				
+			}
+//			个人动态
+			if(sessionStorage.getItem("custom_logo")){
+				sessionStorage.removeItem("anli_logo");
+				$('#index_active').css("display","none");
+				$("#index-post-tag").css("display","block");
+				$("#index_ul").append('<li class="mui-table-view-cell" id="index_active"><div class="mui-slider-handle " id="index_post"><img class="mui-media-object mui-pull-left" src="img/postadd/img3.jpg"><div class="mui-media-body"><p class="mui-ellipsis">乐纤2016健身操挑战赛</p><p class="ellipsis-3">别告诉我没人在乎你的胖瘦,2016乐仙体重管理自我挑战赛开赛了,斩去肥膘,还我小蛮腰</p></div></div></li>');
+				
+			}
+			
+			
+//			检测个性签名
+			if(sessionStorage.getItem("setting_autograph")){
+				$("#index-user-tag").css("visibility","visible");
+				$("#index-user-tag").text(sessionStorage.getItem("setting_autograph"));
+				$("#index-user-modal-tag").text(sessionStorage.getItem("setting_autograph"));
+				$(".address-active").text(sessionStorage.getItem("setting_autograph"));
+			}else{
+				$("#index-user-tag").css("visibility","hidden");
+				$("#index-user-modal-tag").text("请设置个性签名");
+			}
+//			检测QQ
+			if(sessionStorage.getItem("set_qq")){
+				$("#index_qq").text(sessionStorage.getItem("set_qq"));
+				$(".index-qq").text(sessionStorage.getItem("set_qq"));
+				$(".address-qq").text(sessionStorage.getItem("set_qq"));
+			}else{
+				$("#index_qq").css("display","none");
+				$(".index-qq").text("暂未设置QQ");
+			}
+//			检测名字
+			if(sessionStorage.getItem("set_user")){
+				$("#index-user-name").css("visibility","visible");
+				$("#index-user-name").text(sessionStorage.getItem("set_user"));
+				$("#index-user-modal-name").text(sessionStorage.getItem("set_user"));
+				$(".address-name").text(sessionStorage.getItem("set_user"));
+			}
+//			电话
+			$("#index_tel").text(sessionStorage.getItem("set_phone"));
+			$(".index-tel").text(sessionStorage.getItem("set_phone"));
+			$(".address-phone").text(sessionStorage.getItem("set_phone"));
+//			通讯二维码消除
+			$('.qrcode-code').on('click',function(){
+				$("#qrcode-box").css("display","none");
+				
+			})
+			$("#qrcode_close").on("click",function(){
+				$("#qrcode-box").css("display","none");
+			})
+//			左上角二维码点击
+			$("#index-left-ico").click(function(){
+				$("#qrcode-box").css("display","block");
+			})
+			
+//			详细信息点击
+			$("#erwei-div").click(function(){
+				$("#address-box").css("display","block");
+			})
+			$(".index-erwei-close").click(function(){
+				$("#address-box").css("display","none");
+			})
+//			长按保存
+			
+			$(".address-close").mousedown(function(){
+				var address_flag = 0;
+				var oneTime;
+				oneTime = setTimeout(function(){
+					$("#address-box").css("display","none");
+					address_flag = 1;
+				},1000);
+				$(".address-close").mouseup(function(){
+					if(address_flag == 0){
+						clearTimeout(oneTime);
+					}
+				})
+			})
+			
+		})
+	</script>
+
+</html>

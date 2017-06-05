@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>栏目编辑</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no" />
+		<!--不缓存-->
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Cache" content="no-cache">
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<link rel="stylesheet" type="text/css" href="css/menu.css" />
+	</head>
+
+	<body>
+		<div id="menu-box">
+			<div id="setting_shadow">
+				<span>应用链接已可用</span>
+			</div>
+			<div id="menu-tab">
+				<div>
+					<a href="setting.html">基本信息</a>
+				</div>
+				<div>
+					<a href="qraddress.html">通讯录二维码</a>
+				</div>
+				<div>
+					<a class="menu-active">栏目编辑</a>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div>
+
+				<div id="menu-form">
+						<ul class="mui-table-view mui-grid-view mui-grid-9" id="menu-form-ul">
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4" data-menu="线上工作室">
+								<div class="menu-checkbox">
+									<div class="mui-input-row mui-checkbox">
+										<input name="checkbox" value="" type="checkbox" id="inp_studio">
+									</div>
+								</div>
+								<a>
+									<div class="mui-icon menu-icos-xian"></div>
+									<div class="mui-media-body">线上工作室</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 " data-menu="海外购">
+								<div class="menu-checkbox">
+									<div class="mui-input-row mui-checkbox">
+										<input name="checkbox" value="" type="checkbox" id="inp_buy">
+									</div>
+								</div>
+								<a>
+									<div class="mui-icon menu-icos-hai"></div>
+									<div class="mui-media-body">安利海外购</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 ok-drag" data-menu="云知道">
+								<div class="menu-checkbox">
+									<div class="mui-input-row mui-checkbox">
+										<input name="checkbox" value="" type="checkbox" id="inp_know">
+									</div>
+								</div>
+								<a>
+									<div class="mui-icon menu-icos-yun"></div>
+									<div class="mui-media-body">安利云知道</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 ok-drag" data-menu="悅享荟">
+								<div class="menu-checkbox">
+									<div class="mui-input-row mui-checkbox">
+										<input name="checkbox" value="" type="checkbox" id="inp_yue">
+									</div>
+								</div>
+								<a>
+									<div class="mui-icon menu-icos-yue"></div>
+									<div class="mui-media-body">悅享荟</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 ok-drag" data-menu="官方商城">
+								<div class="menu-checkbox">
+									<div class="mui-input-row mui-checkbox">
+										<input name="checkbox" value="" type="checkbox" id="inp_store">
+									</div>
+								</div>
+								<a>
+									<div class="mui-icon menu-icos-guan"></div>
+									<div class="mui-media-body">安利官网</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 ok-drag" data-menu="活动助手">
+								<div class="menu-checkbox">
+									<div class="mui-input-row mui-checkbox">
+										<input name="checkbox" value="" type="checkbox" id="inp_active">
+									</div>
+								</div>
+								<a>
+									<div class="mui-icon menu-icos-huo"></div>
+									<div class="mui-media-body">活动助手</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 ok-drag" data-menu="A+画册">
+								<div class="menu-checkbox">
+									<div class="mui-input-row mui-checkbox">
+										<input name="checkbox" value="" type="checkbox" id="inp_picture">
+									</div>
+								</div>
+								<a>
+									<div class="mui-icon menu-icos-hua"></div>
+									<div class="mui-media-body">A+画册</div>
+								</a>
+							</li>
+							<!--<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 ok-drag" data-menu="公司资讯">
+								<div class="menu-checkbox">
+									<div class="mui-input-row mui-checkbox">
+										<input name="checkbox" value="" type="checkbox" id="inp_zixun">
+									</div>
+								</div>
+								<a>
+									<div class="mui-icon menu-icos-gong"></div>
+									<div class="mui-media-body">公司资讯</div>
+								</a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 ok-drag" data-menu="我的相册">
+								<div class="menu-checkbox">
+									<div class="mui-input-row mui-checkbox">
+										<input name="checkbox" value="" type="checkbox" id="inp_myPicture">
+									</div>
+								</div>
+								<a>
+									<div class="mui-icon menu-icos-wo"></div>
+									<div class="mui-media-body">我的相册</div>
+								</a>
+							</li>
+							
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 ok-drag" data-menu="炫酷大片">
+								<div class="menu-checkbox">
+									<div class="mui-input-row mui-checkbox">
+										<input name="checkbox" value="" type="checkbox" id="inp_xuan">
+									</div>
+								</div>
+								<a>
+									<div class="mui-icon menu-icos-xuan"></div>
+									<div class="mui-media-body">炫酷大片</div>
+								</a>
+							</li>-->
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 ok-drag" data-menu="查真反谣">
+								<div class="menu-checkbox">
+									<div class="mui-input-row mui-checkbox">
+										<input name="checkbox" value="" type="checkbox" id="inp_cha">
+									</div>
+								</div>
+								<a>
+									<div class="mui-icon menu-icos-cha"></div>
+									<div class="mui-media-body">查一查</div>
+								</a>
+							</li>
+						</ul>
+						<div id="menu-button">
+							<button type="button" id="menu-save" class="mui-btn mui-btn-success">保存</button>&nbsp;&nbsp;
+							<button type="button" class="mui-btn mui-btn-grey" id="menu_cancel">取消</button>
+						</div>
+				</div>
+			</div>
+	</body>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script type="text/javascript" src="js/Sortable.min.js" ></script>
+	<script>
+		$(function() {
+			//选中
+			$('.menu-checkbox input[type="checkbox"]').on('change', function() {
+				var value = this.checked ? "true" : "false";
+			});
+			var li_w,li_h;
+			//拖拽
+			var list = document.getElementById("menu-form-ul");
+//			new Sortable(list,{}); // 所有
+			new Sortable(list, {
+			  handle: ".ok-drag", // 容器内可以拖动的元素
+			  draggable: ".ok-drag", // 容器内可以互换位置的元素
+			  onUpdate: function (evt){
+//			  	console.log(evt)
+//			     var item = evt.item; // 一些事件
+				//新菜单列表
+				var menuList=[],menuName='';
+				$('#menu-form-ul>li').each(function(index,item){
+					menuName=$(item).attr('data-menu');
+					menuList.push(menuName);
+				})
+				localStorage.setItem('menuList',menuList);
+			  }
+			});
+			//获取checkbox长度
+			$checkbox_len = $("input[name = 'checkbox']").length;
+			$('#menu-save').on('tap', function() {
+				var menuList=localStorage.getItem('menuList');
+//				alert('菜单列表-->'+menuList)
+//				mui.toast('应用链接已可用');
+				pop_err("应用链接已可用");
+//				获取被选中的checkbox
+				$checked_inp=0;
+				for(i=0;i<$checkbox_len;i++){
+					var inp = document.getElementsByName("checkbox");
+					if(inp[i].checked){
+						$checkbox_id = $("input[name = 'checkbox']").eq(i).attr("id");
+						sessionStorage.setItem($checkbox_id,"1");
+						$checked_inp++;
+					}
+				}
+				sessionStorage.setItem("switch_first","1");
+				sessionStorage.setItem("checked_inp",$checked_inp);
+				setTimeout(function(){
+						document.location.href = 'index.html';
+					},1000)
+				
+			})
+			
+			$("#menu_cancel").on("click",function(){
+				if(sessionStorage.getItem("switch_first") == null){
+					document.location.href = 'begin.html';
+				}else{
+					document.location.href = 'index.html';
+				}
+			})
+			
+//			默认全选
+			for(i=0;i<$checkbox_len;i++){
+				$("input[name = 'checkbox']").eq(i).attr("checked",true);
+			}
+			function pop_err(val){
+				$("#setting_shadow span").text(val);
+				$("#setting_shadow").css("display","block");
+				setTimeout(function(){
+					$("#setting_shadow").css("display","none");
+				},2000)
+			}
+			$("#setting_shadow").on("click",function(){
+				$("#setting_shadow").css("display","none");
+			})
+		})
+	</script>
+
+</html>

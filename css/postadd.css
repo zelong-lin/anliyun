@@ -1,0 +1,328 @@
+/*
+ *zero for 2016-11-05
+ * */
+
+
+/*自定义动态postadd.html*/
+body,html{
+	width: 100%;
+	height: 100%;
+	position:relative;
+}
+#postadd-box {
+	
+}
+.mui-btn-success{
+	border: none;
+}
+ul,li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#setting_shadow{
+	width: 60%;
+	height: 18%;
+	position: absolute;
+	left: 20%;
+	top: 40%;
+	z-index: 100;
+	background: rgba(0,0,0,0.5);
+	border-radius: 10px;
+	text-align: center;
+	display: none;
+}
+#setting_shadow:before{
+	content:'';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+#setting_shadow span{
+	width: 100%;
+	color: white;
+	font-size: 12px;
+	vertical-align: middle;
+}
+#postadd-form {
+	margin: 0 8px;
+	padding-bottom: 90px;
+}
+
+#postadd-tab {
+	width: 100%;
+}
+
+#postadd-tab>div {
+	line-height: 50px;
+	width: 50%;
+	text-align: center;
+	float: left;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+	padding-top: 10px;
+	background-color: #FFFFFF;
+	font-size: 1.1rem;
+}
+
+#postadd-tab>div>a {
+	color: #333;
+}
+
+#postadd-tab>div:nth-of-type(2) {
+	border-left: 1px solid #ddd;
+	margin-left: -1px;
+}
+
+#postadd-tab .postadd-active {
+	color: #ea961b;
+	border-bottom: 3px solid;
+	padding-bottom: 12px;
+}
+
+#postadd-form .mui-input-group {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+#postadd-form .mui-input-group:after {
+	height: 0;
+}
+
+#postadd-form .mui-input-group .mui-input-row {
+	height: 50px;
+}
+
+#postadd-form .mui-input-row {
+	background-color: #FFFFFF;
+}
+
+#postadd-form .mui-input-row label {
+	width: 48%;
+	font-size: 0.9rem;
+	padding: 18px 15px;
+}
+
+#postadd-form .postadd-p {
+	margin-top: 20px;
+	margin-bottom: 3px;
+	margin-left: 10px;
+	font-size: 1.1rem;
+	color: #333;
+}
+
+#postadd-form .mui-input-row input {
+	height: 100%;
+	padding: 6px 15px 6px;
+	font-size: 13px;
+}
+
+#postadd-form .mui-input-group .mui-input-row.postadd-textarea {
+	height: 100px;
+	position: relative;
+}
+
+#postadd-form .mui-input-group .postadd-textarea textarea {
+	height: 100%;
+}
+
+.postadd-number {
+	position: absolute;
+	bottom: 6px;
+	right: 10px;
+	color: #8f8f94;
+}
+
+#postadd-form .mui-input-row .mui-navigate-right>img {
+	width: 30px;
+	margin: 10px 0 0 0;
+	position: absolute;
+	right: 47px;
+}
+
+#postadd-form .mui-input-group .mui-input-row:after {
+	right: 15px;
+}
+
+.mui-input-group .mui-input-row.postadd-line:after {
+	height: 0;
+}
+
+#postadd-button {
+	text-align: center;
+	padding: 20px 0 20px;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	background-color: #efeff4;
+}
+
+#postadd-button button {
+	padding: 10px 0px;
+	font-size: 1.2rem;
+	width: 30%;
+	color: #333;
+}
+
+#postadd-button .mui-btn-success {
+	background-color: #ea961b;
+	color: #f7f7f7;
+}
+
+#postadd-box .mui-ellipsis {
+	color: #000000;
+	font-size: 1.1rem;
+	margin-bottom: 5px;
+}
+
+#postadd-preview-box {
+	display: none;
+	z-index: 999;
+	margin: 0px 20px;
+	position: fixed;
+}
+
+#postadd-preview-box .mui-media-object {
+	width: 100px;
+	max-width: 100px;
+	height: 100px;
+}
+
+#postadd-preview-box .mui-table-view:before,
+#postadd-preview-box .mui-table-view:after {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+#postadd-preview-box button {
+	width: 50%;
+	float: left;
+	font-size: 1.1rem;
+	color: #ea961b;
+	border-top: 1px solid #ddd;
+	border-bottom: 0px solid #ddd;
+	border-left: 0px solid #ddd;
+	border-right: 0px solid #ddd;
+	border-radius: 0;
+	padding: 11px 12px;
+}
+
+#postadd-preview-box a:nth-of-type(2) button {
+	border-left: 1px solid #ddd;
+	color: #aeaeae;
+}
+
+
+/*安利应用*/
+
+#postadd2-form {
+	padding-bottom: 90px;
+}
+
+#postadd2-list {
+	margin: 0 10px;
+}
+
+#postadd2-list p {
+	background-color: #FFFFFF;
+	margin-bottom: 0;
+	padding: 10px;
+}
+
+#postadd2-list p:active {
+	background-color: #EEEEEE;
+}
+
+#postadd2-list-all {
+	display: none;
+	width: 100%;
+	position: relative;
+}
+
+#postadd2-list-all>p {
+	background-color: #f7f7f7;
+}
+
+#postadd2-img,
+#postadd2-helper,
+#postadd2-expand {
+	display: none;
+}
+
+#postadd2-img label,
+#postadd2-helper label,
+#postadd2-expand label {
+	padding: 11px 0;
+	font-size: 0.9rem;
+	padding-right: 50px;
+}
+
+#postadd2-img li,
+#postadd2-helper li,
+#postadd2-expand li {
+	margin-left: 30px;
+}
+
+#postadd2-img .mui-radio input[type=radio],
+#postadd2-helper .mui-radio input[type=radio],
+#postadd2-expand .mui-radio input[type=radio] {
+	right: 10px;
+}
+
+#postadd2-img>p,
+#postadd2-helper>p,
+#postadd2-expand>p {
+	margin: 30px 0 5px 30px;
+	color: #333333;
+	font-size: 1.1rem;
+}
+
+#postadd2-img .postadd2_ball,
+#postadd2-helper .postadd2_ball,
+#postadd2-expand .postadd2_ball{
+	width: 24px;
+	height: 24px;
+	border: 1px #999082 solid;
+	border-radius: 50%;
+	position: absolute;
+	right: 0;
+	top: 17%;
+}
+
+#postadd2-img .postadd2_ball_select,
+#postadd2-helper .postadd2_ball_select,
+#postadd2-expand .postadd2_ball_select{
+	width: 12px;
+	height: 12px;
+	border: 1px #999082 solid;
+	border-radius: 50%;
+	position: absolute;
+	right: 22%;
+	background-color: #EA961B;
+	top: 20%;
+}
+#postadd2-img .postadd2_ball_mo,
+#postadd2-helper .postadd2_ball_mo,
+#postadd2-expand .postadd2_ball_mo{
+	width: 12px;
+	height: 12px;
+	border: 1px #999082 solid;
+	border-radius: 50%;
+	position: absolute;
+	right: 22%;
+	background-color: #EA961B;
+	top: 20%;
+}
+
+#postadd2-more {
+	text-align: center;
+	color: #f7f7f7;
+	vertical-align: middle;
+	position: relative;
+	margin: 10px 0 0 0 !important;
+}
+
+#postadd2-more img {
+	width: 1rem;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
